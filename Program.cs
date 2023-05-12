@@ -2,6 +2,7 @@
 using CsvHelper;
 using HtmlAgilityPack;
 using System.Globalization;
+using webscrap;
 
 Console.WriteLine("Iniciando...");
 
@@ -70,6 +71,9 @@ static void exportToCSV(List<Book> books)
         csv.WriteRecord(books);
     }
 }
+
+Livros.Inicio();
+
 
 class Book
 {
