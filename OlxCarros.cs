@@ -33,7 +33,9 @@ namespace webscrap
         {
             List<string> bookLinks = new List<string>();
             HtmlDocument doc = GetDocument(url);
-            HtmlNodeCollection htmlNodes = doc.DocumentNode.SelectNodes("//*[@id=\"ad-list\"]/li/a");
+            //HtmlNodeCollection htmlNodes = doc.DocumentNode.SelectNodes("//*[@id=\"ad-list\"]/li/a");
+            HtmlNodeCollection htmlNodes = doc.DocumentNode.SelectNodes("//*[@id=\"ad-list\"]/li/section/a");
+            
 
             Uri baseUri = new Uri(url);
             
